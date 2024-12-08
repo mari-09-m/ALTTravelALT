@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Payment gateway</title>
+    <link rel="stylesheet" href="MariStyle.css" />
+  </head>
+
+  <body>
+    <div class="PaymentContainer">
+      <form action="paymentForm">
+        <div class="row">
+          <!---Billing-->
+          <div class="column">
+            <h3 class="title">Billing Address</h3>
+            <div class="input-box">
+              <span>Full Name:</span>
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Full Name"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span>Email:</span>
+              <input
+                type="email"
+                id="email"
+                placeholder="example@mail.com"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span>Address:</span>
+              <input
+                type="text"
+                id="address"
+                placeholder="Apartment-Street-Province"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span>City</span>
+              <input type="text" id="city" placeholder="Dublin" required />
+            </div>
+
+            <div class="flex">
+              <div class="input-box">
+                <span>State:</span>
+                <input type="text" id="state" placeholder="Ireland" required />
+              </div>
+              <div class="input-box">
+                <span>Eircode:</span>
+                <input
+                  type="text"
+                  id="eircode"
+                  placeholder="D20PH123"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <!--Payment section-->
+          <div class="column">
+            <h3 class="title">Payment</h3>
+            <div class="input-box">
+              <span>Cards Accepted:</span>
+              <img src="MariMedia/iconMari/visa.png" alt="visa" />
+            </div>
+            <div class="input-box">
+              <span>Name On Card:</span>
+              <input
+                type="text"
+                id="nameOnCard"
+                placeholder="Mr.John Tom"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span>Credit Card Number:</span>
+              <input
+                type="text"
+                id="cardNumber"
+                placeholder="0000 1111 2222 3333"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span>Exp. Month:</span>
+              <input type="text" id="expMonth" placeholder="Month" required />
+            </div>
+
+            <div class="flex">
+              <div class="input-box">
+                <span>Exp. Year:</span>
+                <input type="text" id="expYear" placeholder="2026" required />
+              </div>
+              <div class="input-box">
+                <span>CVV:</span>
+                <input type="number" id="cvv" placeholder="123" required />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn" id="mySubmit">Submit</button>
+      </form>
+    </div>
+
+    <script src="PaymentJS.js"></script>
+  </body>
+</html>

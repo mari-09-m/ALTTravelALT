@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="TanselStyles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.min.css" />
+  <title>Anniversary Tour</title>
+</head>
+
+<body>
+  <header class="header-alt">
+    <nav class="nav containerAlt">
+      <div class="nav-data">
+        <a href="#" class="nav-logo"><img src="assets/LogoLight.png" alt="picture of logo" id="altLogo" />ALT TRAVELLING
+        </a>
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="ri-menu-line nav-burger"></i>
+          <i class="ri-close-line nav-close"></i>
+        </div>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="dropdown-item">
+            <div class="nav-link">
+              Tours
+              <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+            </div>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="solo.html" class="dropdown-link">
+                  <i class="ri-pie-chart-line"></i>Solo Tours
+                </a>
+              </li>
+              <li>
+                <a href="anniversaryTour.html" class="dropdown-link">
+                  <i class="ri-arrow-up-down-line"></i>Anniversary Tours
+                </a>
+              </li>
+              <li>
+                <a href="MariFamily.html" class="dropdown-link">
+                  <i class="ri-arrow-up-down-line"></i>Family Tours
+                </a>
+              </li>
+              <li class="dropdown-subitem">
+                <div class="dropdown-link">
+                  <i class="ri-bar-chart-line"></i>More
+                  <i class="ri-add-line dropdown-add"></i>
+                </div>
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a href="index.html#target-section2" class="dropdown-sublink">Our Popular Tours</a>
+                  </li>
+                  <li>
+                    <a href="index.html#target-section3" class="dropdown-sublink">Our Services</a>
+                  </li>
+                  <li>
+                    <a href="index.html#target-section4" class="dropdown-sublink">Testimonials</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="MariContact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- __ SLIDER __ -->
+
+  <section id="romantic-destinations-carousel" class="slider-section">
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide" style="background-image: url('assets/bali.jpg')">
+          <div class="carousel-caption">
+            <h3>Bali, Indonesia</h3>
+            <p>
+              Known as the Island of Gods, Bali offers pristine beaches, lush
+              jungles, and enchanting sunsets.
+            </p>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/kapadokya.jpg')">
+          <div class="carousel-caption">
+            <h3>Kapadokya, Turkey</h3>
+            <p>
+              Experience hot air balloon rides over unique rock formations and
+              magical sunrise views.
+            </p>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/rome.jpg')">
+          <div class="carousel-caption">
+            <h3>Rome, Italy</h3>
+            <p>
+              Walk hand-in-hand through ancient ruins and indulge in Italy's
+              finest cuisine and wines.
+            </p>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/japan.jpg')">
+          <div class="carousel-caption">
+            <h3>Kyoto, Japan</h3>
+            <p>
+              Discover cherry blossoms, serene temples, and romantic tea
+              houses in the heart of Kyoto.
+            </p>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/santorini.jpg')">
+          <div class="carousel-caption">
+            <h3>Santorini, Greece</h3>
+            <p>
+              Marvel at iconic white-washed buildings and stunning sunsets
+              over the Aegean Sea.
+            </p>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/venice.jpg')"></div>
+        <div class="carousel-caption">
+          <h3>Venice</h3>
+          <p>
+            Share a gondola ride through picturesque canals and enjoy candlelit dinners by the water.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="slider-btn prev-btn">&lt;</button>
+    <button class="slider-btn next-btn">&gt;</button>
+
+
+    <!-- Thumbnails -->
+    <div class="thumbnails">
+      <img src="assets/bali.jpg" class="thumbnail" data-index="0" alt="Bali" />
+      <img src="assets/kapadokya.jpg" class="thumbnail" data-index="1" alt="Kapadokya" />
+      <img src="assets/rome.jpg" class="thumbnail" data-index="2" alt="Rome" />
+      <img src="assets/japan.jpg" class="thumbnail" data-index="3" alt="Kyoto" />
+      <img src="assets/santorini.jpg" class="thumbnail" data-index="4" alt="Santorini" />
+      <img src="assets/venice.jpg" class="thumbnail" data-index="5" alt="Venice" />
+    </div>
+  </section>
+
+  <div class="reviews-wrapper">
+    <h2>Client Reviews</h2>
+
+    <div class="reviews-container">
+      <div class="review-box">
+        <div class="client-img">
+          <img src="./assets/c1.jpg" alt="client1" />
+
+          <span>
+            <i class="ri-double-quotes-l"> </i>
+          </span>
+        </div>
+        <div class="name">
+          <p class="name-title">Emrek Kavak</p>
+          <p class="title">Software Engineer</p>
+        </div>
+        <div class="review">
+          <p>
+            The instant booking feature is a game-changer. I secured my dream
+            vacation to Bali in minutes!
+          </p>
+        </div>
+      </div>
+      <div class="review-box">
+        <div class="client-img">
+          <img src="./assets/c2.jpg" alt="client2" />
+          <span>
+            <i class="ri-double-quotes-l"> </i>
+          </span>
+        </div>
+        <div class="name">
+          <p class="name-title">Kubilay Can</p>
+          <p class="title">Marketing Manager</p>
+        </div>
+        <div class="review">
+          <p>
+            ALT made my vacation planning effortless and enjoyable. Their best
+            price guarantee really delivered!
+          </p>
+        </div>
+      </div>
+      <div class="review-box">
+        <div class="client-img">
+          <img src="./assets/c3.jpg" alt="client3" />
+          <span>
+            <i class="ri-double-quotes-l"> </i>
+          </span>
+        </div>
+        <div class="name">
+          <p class="name-title">Irem Ozbay</p>
+          <p class="title">Financial Analyst</p>
+        </div>
+        <div class="review">
+          <p>
+            ALT offers an unbeatable combination of great prices and top
+            customer service. Highly recommended!
+          </p>
+        </div>
+      </div>
+      <div class="review-box">
+        <div class="client-img">
+          <img src="./assets/c4.jpg" alt="client4" />
+          <span>
+            <i class="ri-double-quotes-l"> </i>
+          </span>
+        </div>
+        <div class="name">
+          <p class="name-title">Ece Kinikli</p>
+          <p class="title">Event Planner</p>
+        </div>
+        <div class="review">
+          <p>
+            Booking with ALT was a breeze. Their user-friendly interface and
+            instant confirmation saved me so much time.
+          </p>
+        </div>
+      </div>
+      <div class="review-box">
+        <div class="client-img">
+          <img src="./assets/c5.jpg" alt="client5" />
+          <span>
+            <i class="ri-double-quotes-l"> </i>
+          </span>
+        </div>
+        <div class="name">
+          <p class="name-title">Ozgu Ozturk</p>
+          <p class="title">Photographer</p>
+        </div>
+        <div class="review">
+          <p>
+            From booking to travel, every step was seamless. ALT truly makes
+            travel dreams come true!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  +++++++++++++++++++++++++++FOOTER++++++++++++++++++++++++++++++++ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-row">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li>
+              <a href="index.html#target-section4">Our Popular Tours</a>
+            </li>
+            <li><a href="index.html#target-section3">What We Offer</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Tours</h4>
+          <ul class="footer-list">
+            <li><a href="solo.html">Solo Tours</a></li>
+            <li><a href="MariFamily.html">Family Tours</a></li>
+            <li><a href="anniversaryTour.html">Anniversary Tours</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Get in Touch</h4>
+          <ul class="footer-list">
+            <li><a href="MariContact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <a href="https://www.facebook.com/"><img src="Images/footer/Facebook.png" class="social-icon"
+                alt="icon" /></a>
+            <a href="https://www.facebook.com/"><img src="Images/footer/X.png" class="social-icon" alt="icon" /></a>
+            <a href="https://www.instagram.com/"><img src="Images/footer/Instagram.png" class="social-icon"
+                alt="icon" /></a>
+            <a href="https://www.linkedin.com/feed/"><img src="Images/footer/LinkedIn.png" class="social-icon"
+                alt="icon" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="TanselJS.js"></script>
+</body>
+
+</html>

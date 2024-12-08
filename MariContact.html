@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.min.css" />
+  <!-- MARI Style sheet -->
+  <link rel="stylesheet" href="MariStyle.css" />
+  <title>Contact-Alt</title>
+</head>
+
+<body>
+  <!-- +++++++++++++++++++++++++++HEADER/NAVBAR++++++++++++++++++++++++++++++++ -->
+  <header class="header-alt">
+    <nav class="nav containerAlt">
+      <div class="nav-data">
+        <a href="index.html" class="nav-logo"><img src="MariMedia/Logo/LogoLight.png" alt="picture of logo"
+            id="altLogo" />ALT TRAVELLING
+        </a>
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="ri-menu-line nav-burger"></i>
+          <i class="ri-close-line nav-close"></i>
+        </div>
+      </div>
+      <!-- NAVBAR MENU -->
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <!-- DROPDOWN MENU 1 -->
+
+          <li class="dropdown-item">
+            <div class="nav-link">
+              Tours
+              <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+            </div>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="solo.html" class="dropdown-link"> Solo Tours </a>
+              </li>
+              <li>
+                <a href="anniversaryTour.html" class="dropdown-link">
+                  Anniversary Tours
+                </a>
+              </li>
+              <li>
+                <a href="MariFamily.html" class="dropdown-link">
+                  Family Tours
+                </a>
+              </li>
+              <!-- dropdown submenu -->
+              <li class="dropdown-subitem">
+                <div class="dropdown-link">
+                  <i class="ri-bar-chart-line"></i>More
+                  <i class="ri-add-line dropdown-add"></i>
+                </div>
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a href="index.html#target-section2" class="dropdown-sublink">Our Popular Tours</a>
+                  </li>
+                  <li>
+                    <a href="index.html#target-section3" class="dropdown-sublink">Our Services</a>
+                  </li>
+                  <li>
+                    <a href="index.html#target-section4" class="dropdown-sublink">Testimonials</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="MariContact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contact main section -->
+
+  <section class="contactBody">
+    <div class="main">
+      <h1>Contact Us</h1>
+    </div>
+
+    <section id="contact-us" class="container1">
+      <form action="form1">
+        <div class="get">
+          <h1>Get in Touch</h1>
+          <div class="inputsWrapper">
+            <label for="names">Your Name</label>
+            <div class="name">
+              <input type="text" placeholder="Your Name" id="names" required />
+            </div>
+            <label for="number">Phone Number</label>
+            <div class="number">
+              <input type="tel" placeholder="Phone Number" id="number" required />
+            </div>
+            <label for="mail">Email</label>
+            <div class="mail">
+              <input type="email" placeholder="Email" id="mail" required />
+            </div>
+            <label for="msg">Message</label>
+            <textarea name="text" placeholder="Message" cols="30" rows="10" id="msg" required></textarea>
+
+            <button class="primary-btn" id="send" type="button">
+              SEND NOW
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="address">
+        <h1>Talk to us</h1>
+        <br /><br />
+
+        <div class="detailsWrapper">
+          <div class="detail">
+            <img src="MariMedia/iconMari/email.png" alt="detail" />
+            <div class="text">
+              <h6>EMAIL</h6>
+              <p>ALT@example.com</p>
+            </div>
+          </div>
+
+          <div class="detail">
+            <img src="MariMedia/iconMari/phone.png" alt="detail" />
+            <div class="text">
+              <h6>PHONE NUMBER</h6>
+              <p>+082-123-4567</p>
+            </div>
+          </div>
+
+          <div class="detail">
+            <img src="MariMedia/iconMari/location.png" alt="detail" />
+            <div class="text">
+              <h6>Address</h6>
+              <p>
+                Dublin 26 New Town 420, Main road new street<br />
+                Dublin, Ireland
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!--  +++++++++++++++++++++++++++FOOTER++++++++++++++++++++++++++++++++ -->
+  <!--  +++++++++++++++++++++++++++FOOTER++++++++++++++++++++++++++++++++ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-row">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li>
+              <a href="index.html#target-section4">Our Popular Tours</a>
+            </li>
+            <li><a href="index.html#target-section3">What We Offer</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Tours</h4>
+          <ul class="footer-list">
+            <li><a href="solo.html">Solo Tours</a></li>
+            <li><a href="MariFamily.html">Family Tours</a></li>
+            <li><a href="anniversaryTour.html">Anniversary Tours</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Get in Touch</h4>
+          <ul class="footer-list">
+            <li><a href="MariContact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <a href="https://www.facebook.com/"><img src="Images/footer/Facebook.png" class="social-icon"
+                alt="icon" /></a>
+            <a href="https://www.facebook.com/"><img src="Images/footer/X.png" class="social-icon" alt="icon" /></a>
+            <a href="https://www.instagram.com/"><img src="Images/footer/Instagram.png" class="social-icon"
+                alt="icon" /></a>
+            <a href="https://www.linkedin.com/feed/"><img src="Images/footer/LinkedIn.png" class="social-icon"
+                alt="icon" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--******************* MY JS ****************** -->
+
+  <script src="ContactJS.js"></script>
+
+  <!--****************** Navbar icon JS ****************------------>
+  <script>
+    const showMenu = (toggleId, navId) => {
+      const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId);
+
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("show-menu");
+
+        toggle.classList.toggle("show-icon");
+      });
+    };
+
+    showMenu("nav-toggle", "nav-menu");
+  </script>
+</body>
+
+</html>

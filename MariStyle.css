@@ -1,0 +1,1452 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+/* COLORS */
+/* background-color: #fff0db  */
+/* Navbar background color: #171c26; */
+/* Navbar background color(shade): 1d232f */
+/* Shadow color: #0e121b4d */
+/* submenu color: #232a39 */
+
+/* Font Size */
+/* Default font is Poppins, if font does not work, it will default to sans-serif */
+/* default font-size: 14px */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-light: #ec1085;
+    --primary-dark: #e91e63;
+    --black: #000000;
+    --white: #efefef;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    background-color: #fff0db;
+    overflow-x: hidden;
+}
+
+#altLogo {
+    width: 48px;
+    height: 48px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.containerAlt {
+    max-width: 1200px;
+    margin-inline: 24px;
+}
+
+.header-alt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #171c26;
+    box-shadow: 0 2px 16px #0e121b4d;
+    z-index: 100;
+}
+
+/******************************************NAVBAR CSS*****************************/
+
+
+.nav-logo,
+.nav-burger,
+.nav-close {
+    color: #fff;
+}
+
+.nav-data {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 2px;
+    font-weight: 600;
+}
+
+.nav-toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.nav-burger,
+.nav-close {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 18px;
+    cursor: pointer;
+    transition: opacity 0.1s, transform 0.4s;
+}
+
+.nav-close {
+    opacity: 0;
+}
+
+/*************** Navbar HOVER ************/
+.nav-list li a:hover,
+.nav-link:hover,
+.ri-bar-chart-line:hover,
+.dropdown-link:hover {
+    color: #e91e63;
+
+}
+
+
+
+/******************************************RESPONSIVE NAV*****************************/
+@media screen and (max-width: 1200px) {
+    .nav-menu {
+        position: absolute;
+        left: 0;
+        top: 36px;
+        width: 100%;
+        height: calc(100vh - 56px);
+        overflow: auto;
+        pointer-events: none;
+        opacity: 0;
+        /* These 3 lines are hiding the menu REMEMBER THIS */
+        transition: top 0.4s, opacity 0.3s;
+    }
+
+    .nav-menu::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .nav-list {
+        background-color: #171c26;
+        padding-top: 16px;
+    }
+}
+
+.nav-link {
+    color: #fff;
+    background-color: #171c26;
+    font-weight: 600;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #1d232f;
+}
+
+/* showing the menu in JS */
+.show-menu {
+    opacity: 1;
+    top: 48px;
+    pointer-events: initial;
+}
+
+/* Showing the icon in JS */
+
+.show-icon .nav-burger {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.show-icon .nav-close {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    font-size: 20px;
+    font-weight: initial;
+    transition: transform 0.4s;
+}
+
+.dropdown-link,
+.dropdown-sublink {
+    padding: 24px 24px 20px 40px;
+    color: #fff;
+    background-color: #1d232f;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.dropdown-link i,
+.dropdown-sublink {
+    font-size: 20px;
+    font-weight: initial;
+}
+
+.dropdown-link:hover,
+.dropdown-sublink:hover {
+    background-color: #171c26;
+}
+
+.dropdown-menu,
+.dropdown-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.dropdown-item:hover .dropdown-menu,
+.dropdown-subitem:hover>.dropdown-submenu {
+    max-height: 1000px;
+    transition: max-height 0.4s ease-in;
+}
+
+.dropdown-item:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* DROP DOWN SUB MENU */
+
+.dropdown-add {
+    margin-left: auto;
+}
+
+.dropdown-sublink {
+    background-color: #232a39;
+}
+
+/* Small devices */
+@media screen and (max-width: 480px) {
+    .containerAlt {
+        margin-inline: 16px;
+    }
+
+    .nav-link {
+        padding-inline: 16px;
+    }
+}
+
+/* Large devices */
+@media screen and (min-width: 1200px) {
+    .containerAlt {
+        margin-inline: auto;
+    }
+
+    .nav {
+        height: calc(56px + 16px);
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-list {
+        height: 100%;
+        display: flex;
+        column-gap: 48px;
+    }
+
+    .nav-link {
+        height: 100%;
+        padding: 0;
+        justify-content: initial;
+        column-gap: 2px;
+    }
+
+    .nav-link:hover {
+        background-color: transparent;
+    }
+
+    .dropdown-item,
+    .dropdown-subitem {
+        position: relative;
+    }
+
+    .dropdown-menu,
+    .dropdown-submenu {
+        max-height: initial;
+        overflow: initial;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        opacity: 0;
+        pointer-events: none;
+
+        /* THIS IS HIDING THE DROPDOWN MENU AND SUBMENU */
+        transition: opacity 0.3s, top 0.3s;
+    }
+
+    .dropdown-link,
+    .dropdown-sublink {
+        padding-inline: 16px 56px;
+    }
+
+    .dropdown-subitem .dropdown-link {
+        padding-inline: 16px;
+    }
+
+    .dropdown-submenu {
+        position: absolute;
+        left: 100%;
+        top: 8px;
+    }
+}
+
+
+
+/* SHOWING THE DROPDOWN MENU */
+.dropdown-item:hover .dropdown-menu {
+    opacity: 1;
+    top: 70px;
+    pointer-events: initial;
+    transition: top 0.3s;
+}
+
+.dropdown-subitem:hover>.dropdown-submenu {
+    opacity: 1;
+    top: 0;
+    pointer-events: initial;
+    transition: top 0.3s;
+}
+
+
+/*****************First Section***********/
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(MariMedia/Altai-Mountain.jpg);
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.header-content h1 {
+    font-size: 60px;
+    color: var(--primary-dark);
+    font-weight: 500;
+}
+
+.header-content p {
+    font-size: 40px;
+    color: var(--primary-dark);
+
+}
+
+.primary-btn {
+    padding: 10px 24px;
+    background-color: #f46897;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    /*when your cursor is going to this button color is gonna change*/
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ****************Video */
+/* Section Styling */
+#about1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+
+}
+
+/* Video Styling */
+.about1-img {
+    width: 100%;
+    max-width: 800px;
+    /* Limit video width */
+    margin-bottom: 20px;
+}
+
+.about1-img video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Optional shadow */
+}
+
+/* Content Styling */
+.about1-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about1-content h1 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.about1-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+
+/* ********About 2 - About 3 *******8 */
+
+#about2,
+#about3 {
+    display: flex;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about2-content,
+.about3-content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+.about2-img,
+.about3-img {
+    position: relative;
+    width: 45%;
+    max-width: 100%;
+    /* Ensure responsiveness */
+    padding: 0;
+    /* Remove extra padding for precise alignment */
+}
+
+#about2 img,
+#about3 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Maintain aspect ratio and ensure full coverage */
+    border-radius: 8px;
+}
+
+/* TTTTTTTTTTTTTttttttttestttttttttttttttt */
+
+
+.hidden-text {
+    display: none;
+}
+
+
+
+/* Overlay Effect */
+.overlayzz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 8px;
+    /* Match the border-radius of the images */
+    z-index: 2;
+}
+
+.about2-img:hover .overlayzz,
+.about3-img:hover .overlayzz {
+    opacity: 1;
+    /* Show overlay on hover */
+}
+
+.overlayzz .description {
+    padding: 20px;
+}
+
+.overlayzz .description h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.overlayzz .description p,
+.primary-btn {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.overlayzz .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f46897;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.overlayzz .btn:hover {
+    background-color: #e91e63;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    #about2,
+    #about3 {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .about2-content,
+    .about3-content,
+    .about2-img,
+    .about3-img {
+        width: 90%;
+    }
+
+    .overlayzz .description h3 {
+        font-size: 30px;
+    }
+
+    .overlayzz .description p {
+        font-size: 14px;
+    }
+}
+
+
+
+/* ******************Our Family Popular Tour ************/
+
+
+h2 {
+    text-align: center;
+    /* Center the text horizontally */
+
+    font-size: 30px;
+    /* Adjust font size */
+    color: #333;
+    /* Optional: Change text color */
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    /* Center the cards horizontally */
+    flex-wrap: wrap;
+    /* Allow cards to wrap on smaller screens */
+    margin-top: 50px;
+    margin-bottom: 150px;
+    gap: 30px;
+    /* Increased spacing between cards */
+}
+
+.card {
+    width: 100%;
+    /* Full width by default */
+    max-width: 350px;
+    /* Max width for cards */
+    background-color: #fff0db;
+
+    overflow: hidden;
+
+
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    /* Fixed height for the image container */
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    overflow: hidden;
+    border: none;
+    border-radius: 4px;
+}
+
+.card img {
+    width: 100%;
+    /* Set width to 100% for responsiveness */
+    height: 100%;
+    /* Set height to 100% for responsiveness */
+    object-fit: cover;
+    /* Ensure the image covers the entire area while maintaining its aspect ratio */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+
+.overlay p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f46897;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.card-content h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+    flex-grow: 1;
+}
+
+.card-content .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f46897;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #e91e63;
+}
+
+
+
+
+
+
+
+
+/*****************Slide Animation*************/
+
+/*Slider Animation section*/
+
+.slider {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: -50px;
+}
+
+.slider .listt .itemm {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.slider .listt .itemm img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .listt .itemm .contentt {
+    position: absolute;
+    top: 10%;
+    width: 1200px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.slider .listt .itemm .contentt .titlee,
+.slider .listt .itemm .contentt .typee {
+    font-size: 3.5em;
+    line-height: 1.3em;
+
+}
+
+.slider .listt .itemm .contentt .typee {
+    color: #e91e63;
+}
+
+.slider .listt .itemm .contentt .descriptionn {
+    font-size: 14px;
+
+}
+
+.slider .listt .itemm .contentt .buttonn {
+    margin-top: 20px;
+}
+
+.slider .listt .itemm .contentt .buttonn button {
+    border: none;
+    border-radius: 20px;
+    background-color: #eee;
+    padding: 7px 15px;
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+.slider .listt .itemm .contentt .buttonn button:hover {
+    background-color: #e91e63;
+    color: #eee;
+}
+
+/*Thumbnail Section*/
+.thumbnail {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+}
+
+.thumbnail .itemm {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+
+}
+
+.thumbnail .itemm img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* nextPrevArrows Section*/
+
+.nextPrevArrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.nextPrevArrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e91e63;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nextPrevArrows button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/*Animation Part */
+.slider .listt .itemm:nth-child(1) {
+    z-index: 1;
+}
+
+.slider .listt .itemm:nth-child(1) .contentt .titlee,
+.slider .listt .itemm:nth-child(1) .contentt .typee,
+.slider .listt .itemm:nth-child(1) .contentt .descriptionn,
+.slider .listt .itemm:nth-child(1) .contentt .buttonn {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0px);
+        filter: blur(00px);
+        opacity: 1;
+
+    }
+}
+
+.slider .listt .itemm:nth-child(1) .contentt .titlee {
+    animation-delay: 0.4s;
+}
+
+.slider .listt .itemm:nth-child(1) .contentt .typee {
+    animation-delay: 0.6s;
+}
+
+.slider .listt .itemm:nth-child(1) .contentt .descriptionn {
+    animation-delay: 0.8s;
+}
+
+.slider .listt .itemm:nth-child(1) .contentt .buttonn {
+    animation-delay: 1s;
+}
+
+/*Animation for next button click*/
+
+.slider.nextt .listt .itemm:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.slider.next .thumbnail .itemm:nth-last-child(1) {
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.slider.prev .listt .itemm img {
+    z-index: 100;
+}
+
+@keyframes showThumbnail {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.slider .next .thumbnail {
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext {
+    from {
+        transform: translateX(15px);
+    }
+
+}
+
+/* Animation for Prev button click */
+.slider.prev .listt .itemm:nth-child(2) {
+    z-index: 2;
+}
+
+.slider.prev .listt .itemm:nth-child(2) img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outFrame 0.5s linear 1 forwards;
+}
+
+@keyframes outFrame {
+    to {
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.slider.prev .thumbnail .itemm:nth-child(1) {
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+.slider.prev .listt .itemm:nth-child(1) .contentt .titlee,
+.slider.prev .listt .itemm:nth-child(1) .contentt .typee,
+.slider.prev .listt .itemm:nth-child(1) .contentt .descriptionn,
+.slider.prev .listt .itemm:nth-child(1) .contentt .buttonn {
+    animation: contentOut 0.5s 1s linear 1 forwards;
+}
+
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider .listt .itemm .contentt {
+        padding-right: 0;
+    }
+
+    .slider .listt .itemm .contentt .titlee {
+        font-size: 30px;
+    }
+}
+
+/****************************** Talk-to-us******************/
+
+
+#talk-to-us {
+    background-image: url(MariMedia/Discover-Mongolia.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    margin-top: 120px;
+}
+
+.talk-to-us-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    gap: 16px;
+    padding: 0 16px;
+    text-align: center;
+}
+
+.talk-to-us-content h1 {
+    color: white;
+}
+
+.talk-to-us-content p {
+    max-width: 500px;
+    color: white;
+}
+
+
+/****************************************************FOOTER CSS***************************/
+
+/* ***************************************************RESPONSEIVE FOOTER **************************** */
+
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-column {
+    width: 25%;
+    padding: 0;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-column h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-list li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-list li a:hover {
+    color: #ffff;
+    padding-left: 8px;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    animation: shake 0.5s;
+}
+
+/************Footer social icon shake*/
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px);
+    }
+
+    25% {
+        transform: translate(-1px, -1px);
+    }
+
+    50% {
+        transform: translate(1px, 1px);
+    }
+
+    75% {
+        transform: translate(-1px, -1px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* ***************************************************RESPONSEIVE FOOTER **************************** */
+@media (max-width: 1200px) {
+    .footer-column {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .footer-column {
+        width: 35%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-column {
+        width: 50%;
+    }
+}
+
+/* *****************************8 Contact Page **********************/
+
+
+.main {
+
+    margin-top: 100px;
+    justify-content: center;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.contactBody {
+    overflow-x: hidden;
+    background-image: url(MariMedia/zzz.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.address h1,
+.get h1 {
+    font-size: 25px;
+
+}
+
+.container1 {
+    max-width: 1200px;
+
+}
+
+
+#contact-us {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px auto;
+    gap: 100px;
+
+}
+
+form {
+    flex-basis: 50%;
+}
+
+
+.inputsWrapper input,
+textarea {
+    /* Ensure none of these are hiding the inputs */
+    display: block;
+    /* or inline-block */
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    /* or appropriate */
+    border-radius: 10px;
+}
+
+.inputsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.inputsWrapper input {
+    padding: 12px 16px;
+    width: 100%;
+    border: 1px solid var(--primary-dark);
+    outline: none;
+}
+
+.inputsWrapper textarea {
+    padding: 12px 16px;
+    width: 100%;
+    border: 1px solid var(--primary-dark);
+    outline: none;
+}
+
+.address {
+    flex-basis: 50%;
+}
+
+.detailsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 60px;
+}
+
+.detail {
+    display: flex;
+    gap: 10px;
+}
+
+.detail img {
+    width: 40px;
+    height: 40px;
+    background-color: #e91e63;
+    border-radius: 20px;
+}
+
+.detail h6,
+p {
+    padding: 5px;
+    color: black;
+}
+
+/* ****************** PAYMENT ****************** */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/********** MariPayment.html's CSS  *********************************/
+
+.PaymentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1f242d;
+    padding: 25px;
+}
+
+.PaymentContainer form {
+    width: 700px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+
+}
+
+form .row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.row .column {
+    flex: 1 1 250px;
+}
+
+.column .title {
+    font-size: 20px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.column .input-box {
+    margin: 15px 0;
+}
+
+.input-box span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+
+}
+
+.column .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.flex .input-box {
+    margin-top: 5px;
+}
+
+/*visa-img*/
+.input-box img {
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+form .btn {
+    width: 100%;
+    padding: 12px;
+    background: #8175d3;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+form .btn:hover {
+    background: #6a5acd;
+}
+
+/**** MariPopup.html 's CSS  ***************************************************/
+
+.popupBackground {
+    width: 100%;
+    height: 100vh;
+    background: #1f242d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.popup {
+    width: 500px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    margin-top: 100px;
+    justify-content: center;
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #070707;
+}
+
+.open-popup {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img {
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500px;
+    margin: 30px 0 30px;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup button:hover {
+    background-color: #0d540d;
+}
+
+
+/**** MariPopup.html 's Responsive Styles *****************************************************8**/
+@media screen and (max-width: 768px) {
+    .popup {
+        width: 90%;
+        /* Adjust width for smaller screens */
+        padding: 20px;
+        /* Reduce padding */
+    }
+
+    .popup img {
+        width: 80px;
+        /* Reduce image size */
+    }
+
+    .popup h2 {
+        font-size: 24px;
+        /* Smaller font for titles */
+        margin: 20px 0;
+    }
+
+    .popup p {
+        font-size: 16px;
+        /* Adjust paragraph font size */
+    }
+
+    .popup button {
+        font-size: 16px;
+        /* Adjust button font size */
+        padding: 8px 0;
+        /* Reduce button padding */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .popup {
+        margin-top: 50px;
+        /* Adjust margin for smaller screens */
+        padding: 10px;
+        /* Minimal padding for very small screens */
+    }
+
+    .popup img {
+        width: 60px;
+        /* Further reduce image size */
+    }
+
+    .popup h2 {
+        font-size: 20px;
+        /* Smaller title font size */
+    }
+
+    .popup p {
+        font-size: 14px;
+        /* Adjust text font size */
+    }
+
+    .popup button {
+        font-size: 14px;
+        /* Button font size for small devices */
+    }
+}

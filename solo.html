@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/icon" href="images/favicon/favicon/favicon.ico" />
+  <title>ALT TOURS</title>
+</head>
+
+<body>
+  <!-- +++++++++++++++++++++++++++HEADER/NAVBAR++++++++++++++++++++++++++++++++ -->
+  <header class="header-alt">
+    <nav class="nav containerAlt">
+      <div class="nav-data">
+        <a href="index.html" class="nav-logo"><img src="Images/Logo/LogoLight.png" alt="picture of logo"
+            id="altLogo" />ALT TRAVELLING
+        </a>
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="ri-menu-line nav-burger"></i>
+          <i class="ri-close-line nav-close"></i>
+        </div>
+      </div>
+      <!-- NAVBAR MENU -->
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <!-- DROPDOWN MENU 1 -->
+
+          <li class="dropdown-item">
+            <div class="nav-link">
+              Tours
+              <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+            </div>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="solo.html" class="dropdown-link"> Solo Tours </a>
+              </li>
+              <li>
+                <a href="anniversaryTour.html" class="dropdown-link">
+                  Anniversary Tours
+                </a>
+              </li>
+              <li>
+                <a href="MariFamily.html" class="dropdown-link">
+                  Family Tours
+                </a>
+              </li>
+              <!-- dropdown submenu -->
+              <li class="dropdown-subitem">
+                <div class="dropdown-link">
+                  More
+                  <i class="ri-add-line dropdown-add"></i>
+                </div>
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a href="index.html#target-section2" class="dropdown-sublink">Our Popular Tours</a>
+                  </li>
+                  <li>
+                    <a href="index.html#target-section3" class="dropdown-sublink">Our Services</a>
+                  </li>
+                  <li>
+                    <a href="index.html#target-section4" class="dropdown-sublink">Testimonials</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="MariContact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- +++++++++++++++++++++++++++SOLO HERO SECTION++++++++++++++++++++++++++++++++ -->
+  <section aria-label="Newest Photos" class="section-padding">
+    <div class="carousel" data-carousel>
+      <button class="carousel-button prev" data-carousel-button="prev">
+        &#8656;
+      </button>
+      <button class="carousel-button next" data-carousel-button="next">
+        &#8658;
+      </button>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="Images/ExpandingGallery/northlights.jpg" alt="Nature Image #1" />
+        </li>
+        <li class="slide">
+          <img src="Images/ExpandingGallery/snowboarding.jpg" alt="Nature Image #2" />
+        </li>
+        <li class="slide">
+          <img src="Images/ExpandingGallery/ny.jpg" alt="Nature Image #3" />
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!--  +++++++++++++++++++++++++++FOOTER++++++++++++++++++++++++++++++++ -->
+
+  <section class="section-container">
+    <div class="sectionTitle">
+      <h2>Ready to find your next big adventure?</h2>
+      <p>
+        Let us help! We offer all kinds of different tours for the whole
+        family, and even for our solo adventurers!
+      </p>
+    </div>
+
+    <div class="landing-grid">
+      <!-- Section 1 -->
+      <div class="landing-hero">
+        <div class="landing-img">
+          <img src="Images/sologallery/skydive2.jpg" alt="generic photo for text" />
+        </div>
+        <div class="landing-text">
+          <div class="content">
+            <h2>Dive into your adventures</h2>
+            <p id="short-description-1">
+              "Experience the thrill of a lifetime with our skydiving tours!"
+            </p>
+            <p id="full-description-1" style="display: none">
+              "Experience the thrill of a lifetime with our skydiving tours!
+              Whether you're diving solo for an unmatched sense of freedom or
+              teaming up with friends for an unforgettable group adventure, we
+              cater to all levels of experience. Soar through the skies, feel
+              the rush, and make memories that will last forever. Book your
+              spot today!"
+            </p>
+            <div class="btn-container">
+              <a class="btn" id="read-more-btn-1" onclick="toggleText(1)">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="landing-hero">
+        <div class="landing-img">
+          <img src="Images/sologallery/dogsled1.jpg" alt="generic photo for text" />
+        </div>
+        <div class="landing-text">
+          <div class="content">
+            <h2>Soar above the clouds</h2>
+            <p id="short-description-2">
+              "Feel the rush as you skydive into an epic journey!"
+            </p>
+            <p id="full-description-2" style="display: none">
+              "Feel the rush as you skydive into an epic journey! Join a group
+              for camaraderie or dive solo for the ultimate freedom. Perfect
+              for beginners and pros alike, this adventure will leave you
+              speechless. Reserve your jump today!"
+            </p>
+            <div class="btn-container">
+              <a class="btn" id="read-more-btn-2" onclick="toggleText(2)">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="landing-hero">
+        <div class="landing-img">
+          <img src="Images/sologallery/beach2.jpg" alt="generic photo for text" />
+        </div>
+        <div class="landing-text">
+          <div class="content">
+            <h2>Push your limits</h2>
+            <p id="short-description-3">
+              "Challenge yourself with an unforgettable dive."
+            </p>
+            <p id="full-description-3" style="display: none">
+              "Challenge yourself with an unforgettable dive. Our expert
+              guides ensure a safe and exhilarating experience tailored to
+              you. Whether solo or in a group, this is a leap you'll always
+              remember!"
+            </p>
+            <div class="btn-container">
+              <a class="btn" id="read-more-btn-3" onclick="toggleText(3)">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="landing-hero">
+        <div class="landing-img">
+          <img src="Images/sologallery/northlight1.jpg" alt="generic photo for text" />
+        </div>
+        <div class="landing-text">
+          <div class="content">
+            <h2>Make memories</h2>
+            <p id="short-description-4">
+              "Capture moments that will last forever."
+            </p>
+            <p id="full-description-4" style="display: none">
+              "Capture moments that will last forever. Experience the thrill
+              of freefall with friends or savor the solitude of solo
+              skydiving. Every jump is unique and unforgettable!"
+            </p>
+            <div class="btn-container">
+              <a class="btn" id="read-more-btn-4" onclick="toggleText(4)">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3rd landing hero -->
+  </section>
+
+  <!-- +++++++++++++++++++++++++++SOLO GALLERY SECTION++++++++++++++++++++++++++++++++ -->
+  <section class="section-container">
+    <div class="gallery-container">
+      <h2 class="sectionTitle">Our Gallery</h2>
+      <div class="photo-gallery">
+        <!-- Column 1 -->
+        <div class="column">
+          <div class="photo">
+            <img src="Images/sologallery/beach1.jpg" alt="picture of a beach resort" />
+          </div>
+          <div class="photo">
+            <img src="Images/sologallery/beach2.jpg" alt="picture of a beach resort" />
+          </div>
+          <div class="photo">
+            <img src="Images/sologallery/beachside1.jpg" alt="beachside view" />
+          </div>
+          <!-- New Photos (hidden by default) -->
+          <div class="photo hidden">
+            <img src="Images/sologallery/bikes.jpg" alt="sunset at a beach" />
+          </div>
+          <div class="photo hidden">
+            <img src="Images/sologallery/islands.jpg" alt="waves at the shore" />
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="column">
+          <div class="photo">
+            <img src="Images/sologallery/dogsled1.jpg" alt="sunrise dog sledding" />
+          </div>
+          <div class="photo">
+            <img src="Images/sologallery/dogsled2.jpg" alt="Dog sledding activities" />
+          </div>
+          <div class="photo">
+            <img src="Images/sologallery/dogsled3.jpg" alt="Dog sledding activities" />
+          </div>
+          <!-- New Photos (hidden by default) -->
+          <div class="photo hidden">
+            <img src="Images/sologallery/view2.jpg" alt="an amzing view over mountains" />
+          </div>
+          <div class="photo hidden">
+            <img src="Images/sologallery/moto.jpg" alt="motorbike" />
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="column">
+          <div class="photo">
+            <img src="Images/sologallery/beach1.jpg" alt="helicopter tour picture" />
+          </div>
+          <div class="photo">
+            <img src="Images/sologallery/sandboarding.jpg" alt="Northern Lights" />
+          </div>
+          <div class="photo">
+            <img src="Images/sologallery/cabins.jpg" alt="Northern Lights in the city" />
+          </div>
+          <!-- New Photos (hidden by default) -->
+          <div class="photo hidden">
+            <img src="Images/sologallery/nonalps.jpg" alt="city view from helicopter" />
+          </div>
+          <div class="photo hidden">
+            <img src="Images/sologallery/view.jpg" alt="aurora over mountains" />
+          </div>
+        </div>
+      </div>
+      <!-- Buttons -->
+      <div class="button-container">
+        <button id="load-more-btn" class="btn">Load More</button>
+        <button id="load-less-btn" class="btn hidden">Load Less</button>
+      </div>
+    </div>
+  </section>
+
+  <!--  +++++++++++++++++++++++++++Planning/CTA++++++++++++++++++++++++++++++++ -->
+  <section class="section-container">
+    <div class="planning-container">
+      <div class="cta-content">
+        <h4>Ready for your next adventure?</h4>
+        <p>
+          Plan your next trip now and make unforgettable memmories and
+          experience what the world has to offer!
+        </p>
+        <a href="services.html"><button class="cta-btn">Choose a tour now</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!--  +++++++++++++++++++++++++++FOOTER++++++++++++++++++++++++++++++++ -->
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-row">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li>
+              <a href="index.html#target-section4">Our Popular Tours</a>
+            </li>
+            <li><a href="index.html#target-section3">What We Offer</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Tours</h4>
+          <ul class="footer-list">
+            <li><a href="solo.html">Solo Tours</a></li>
+            <li><a href="MariFamily.html">Family Tours</a></li>
+            <li><a href="anniversaryTour.html">Anniversary Tours</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Get in Touch</h4>
+          <ul class="footer-list">
+            <li><a href="MariContact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <a href="https://www.facebook.com/"><img src="Images/footer/Facebook.png" class="social-icon"
+                alt="icons" /></a>
+            <a href="https://www.facebook.com/"><img src="Images/footer/X.png" class="social-icon" alt="icons" /></a>
+            <a href="https://www.instagram.com/"><img src="Images/footer/Instagram.png" class="social-icon"
+                alt="icons" /></a>
+            <a href="https://www.linkedin.com/feed/"><img src="Images/footer/LinkedIn.png" class="social-icon"
+                alt="icons" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>

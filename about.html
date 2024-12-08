@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.min.css" />
+  <link rel="stylesheet" href="TanselStyles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Agency ALT</title>
+</head>
+
+<body>
+  <header class="header-alt">
+    <nav class="nav containerAlt">
+      <div class="nav-data">
+        <a href="index.html" class="nav-logo"><img src="assets/LogoLight.png" alt="picture of logo" id="altLogo" />ALT
+          TRAVELLING
+        </a>
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="ri-menu-line nav-burger"></i>
+          <i class="ri-close-line nav-close"></i>
+        </div>
+      </div>
+      <!-- NAVBAR MENU -->
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <!-- DROPDOWN MENU 1 -->
+
+          <li class="dropdown-item">
+            <div class="nav-link">
+              Tours
+              <i class="ri-arrow-down-s-line dropdown-arrow"></i>
+            </div>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="solo.html" class="dropdown-link">
+                  <i class="ri-pie-chart-line"></i>Solo Tours
+                </a>
+              </li>
+              <li>
+                <a href="anniversaryTour.html" class="dropdown-link">
+                  <i class="ri-arrow-up-down-line"></i>Anniversary Tours
+                </a>
+              </li>
+              <li>
+                <a href="MariFamily.html" class="dropdown-link">
+                  <i class="ri-arrow-up-down-line"></i>Family Tours
+                </a>
+              </li>
+              <!-- dropdown submenu -->
+              <li class="dropdown-subitem">
+                <div class="dropdown-link">
+                  <i class="ri-bar-chart-line"></i>More
+                  <i class="ri-add-line dropdown-add"></i>
+                </div>
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a href="index.html#target-section2" class="dropdown-sublink">Our Popular Tours</a>
+                  </li>
+                  <li>
+                    <a href="index.html#target-section3" class="dropdown-sublink">Our Services</a>
+                  </li>
+                  <li>
+                    <a href="index.html#target-section4" class="dropdown-sublink">Testimonials</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="MariContact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- OUR STORY/OUR MISSION/OUR TEAM-->
+  <div class="about-section">
+    <div class="menu">
+      <button data-target="story" class="active">Our Story</button>
+      <button data-target="mission">Our Mission</button>
+      <button data-target="vision">Our Team</button>
+    </div>
+
+    <div class="about-container">
+      <div class="about-wrapper">
+        <div id="story" class="content active">
+          Founded in 2002 by a group of passionate travelers, ALT started with
+          the vision of making travel accessible and enjoyable for everyone.
+          Over the years, we have grown into a trusted name in the travel
+          industry, offering a range of comprehensive services.
+        </div>
+        <div id="mission" class="content">
+          Our mission is to inspire people to explore the world with
+          confidence. We aim to provide seamless travel experiences by
+          combining excellent customer service, advanced technology, and
+          expert travel knowledge.
+        </div>
+        <div id="vision" class="content">
+          The idea of ALT originated with Tansel, Lkhagvadulam and Anand, who
+          were inspired by their shared experiences and passion for travel
+          during their student years. Their drive to create better travel
+          opportunities led to the formation of a company aimed at providing
+          innovative and enjoyable travel experiences.
+        </div>
+
+        <span class="top"></span>
+        <span class="right"></span>
+        <span class="bottom"></span>
+        <span class="left"></span>
+      </div>
+    </div>
+    <!--OUR SERVICES-->
+    <div class="featured-wrapper">
+      <div class="featured-header">
+        <h2>Our Services</h2>
+        <p>
+          We specialize in crafting unforgettable travel experiences tailored
+          to your unique needs. Whether you are planning a Solo Tour to
+          discover new horizons, a Family Tour to create cherished memories,
+          or an Anniversary Tour to celebrate love and milestones, our expert
+          team is here to ensure every detail is perfect. Explore the world
+          your way with our personalized services.
+        </p>
+      </div>
+      <div class="featured-box">
+        <div class="featured-component">
+          <div class="feature-img">
+            <img src="assets/1.jpg" alt="1" />
+          </div>
+          <div class="featured-container">
+            <div class="fearuted-place">
+              <p>Explore Dream Destinations</p>
+            </div>
+            <div class="Explore">
+              <p>
+                Uncover the beauty of the world’s most breathtaking locations.
+                From serene beaches to vibrant cities, your next adventure
+                starts here.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="featured-component">
+          <div class="feature-img">
+            <img src="assets/2.jpg" alt="2" />
+          </div>
+          <div class="featured-container">
+            <div class="fearuted-place">
+              <p>Exclusive Deals for Every Traveler</p>
+            </div>
+            <div class="Exclusive">
+              <p>
+                Travel smarter with our exclusive tour packages. Experience
+                the perfect balance of affordability and unforgettable
+                experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="featured-component">
+          <div class="feature-img">
+            <img src="assets/3.jpg" alt="3" />
+          </div>
+          <div class="featured-container">
+            <div class="fearuted-place">
+              <p>Effortless Travel Planning</p>
+            </div>
+            <div class="Effortless">
+              <p>
+                Say goodbye to stress and hello to seamless bookings. Let us
+                take care of the details while you enjoy the journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--TOUR PAKAGES LINKED TO TOUR PAGES-->
+
+    <div class="featured-wrapper services" id="services">
+      <div class="featured-header">
+        <h2>Solo Tours</h2>
+        <p>Great travel destinations make unforgettable memories.</p>
+      </div>
+      <div class="featured-box">
+        <div class="featured-component">
+          <a href="solo.html">
+            <div class="feature-img city">
+              <img src="assets/skydive1.jpg" alt="1" />
+              <p>Diving</p>
+            </div>
+          </a>
+        </div>
+        <div class="featured-component">
+          <a href="solo.html">
+            <div class="feature-img city">
+              <img src="assets/dogsled1.jpg" alt="2" />
+              <p>Dog Sledding</p>
+            </div>
+          </a>
+        </div>
+        <div class="featured-component">
+          <a href="solo.html">
+            <div class="feature-img city">
+              <img src="assets/northlight1.jpg" alt="3" />
+              <p>Night Sky Lights</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="featured-wrapper services" id="services2">
+      <div class="featured-header">
+        <h2>Anniversary Tours</h2>
+        <p>Great travel destinations make unforgettable memories.</p>
+      </div>
+      <div class="featured-box">
+        <a href="anniversaryTour.html" class="featured-component">
+          <div class="feature-img city">
+            <img src="assets/bali.jpg" alt="1" />
+            <p>Bali</p>
+          </div>
+        </a>
+        <a href="anniversaryTour.html" class="featured-component">
+          <div class="feature-img city">
+            <img src="assets/santorini.jpg" alt="2" />
+            <p>Santorini</p>
+          </div>
+        </a>
+        <a href="anniversaryTour.html" class="featured-component">
+          <div class="feature-img city">
+            <img src="assets/venice.jpg" alt="3" />
+            <p>Venice</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="featured-wrapper services" id="services3">
+      <div class="featured-header">
+        <h2>Family Tours</h2>
+        <p>Great travel destinations make unforgettable memories.</p>
+      </div>
+      <div class="featured-box">
+        <a href="MariFamily.html" class="featured-component">
+          <div class="feature-img city">
+            <img src="MariMedia/Altai-Mountain.jpg" alt="1" />
+            <p>Gobi</p>
+          </div>
+        </a>
+        <a href="MariFamily.html" class="featured-component">
+          <div class="feature-img city">
+            <img src="MariMedia/Eagle.png" alt="2" />
+            <p>Altai</p>
+          </div>
+        </a>
+        <a href="MariFamily.html" class="featured-component">
+          <div class="feature-img city">
+            <img src="MariMedia/lanscape.jpg" alt="3" />
+            <p>Khuvsgul </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--  +++++++++++++++++++++++++++FOOTER++++++++++++++++++++++++++++++++ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-row">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li>
+              <a href="index.html#target-section4">Our Popular Tours</a>
+            </li>
+            <li><a href="index.html#target-section3">What We Offer</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Tours</h4>
+          <ul class="footer-list">
+            <li><a href="solo.html">Solo Tours</a></li>
+            <li><a href="MariFamily.html">Family Tours</a></li>
+            <li><a href="anniversaryTour.html">Anniversary Tours</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Get in Touch</h4>
+          <ul class="footer-list">
+            <li><a href="MariContact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <a href="https://www.facebook.com/"><img src="Images/footer/Facebook.png" class="social-icon"
+                alt="icon" /></a>
+            <a href="https://www.facebook.com/"><img src="Images/footer/X.png" class="social-icon" alt="icon" /></a>
+            <a href="https://www.instagram.com/"><img src="Images/footer/Instagram.png" class="social-icon"
+                alt="icon" /></a>
+            <a href="https://www.linkedin.com/feed/"><img src="Images/footer/LinkedIn.png" class="social-icon"
+                alt="icon" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="TanselJS.js"></script>
+</body>
+
+</html>

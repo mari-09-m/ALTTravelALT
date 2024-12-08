@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  background-color: #fff0db;
+  font-family: "Outfit", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 576px) {
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+.nav-link-custom {
+  position: relative;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+}
+
+.nav-link-custom:hover {
+  background-color: #e91e63;
+}
+
+.dropdown-menu .nav-link-custom {
+  border-radius: 50px;
+}
+
+.dropdown-menu .nav-link-custom:hover {
+  background-color: #e91e63;
+  color: white;
+}
+
+.nav-link-custom:hover,
+.dropdown-item.nav-link-custom:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Active Link Styling */
+.nav-link.active.nav-link-custom {
+  color: white;
+}
+
+.navbar-toggler {
+  border: none; /* Remove default border for the toggle button */
+}
+
+/* Dropdown Toggle Styling */
+.dropdown-toggle.nav-link-custom {
+  border-radius: 20px; /* Rounded borders for dropdown toggles */
+}
+
+/* Add padding to the dropdown items for better spacing */
+.dropdown-menu {
+  padding: 0.5rem 0;
+}
+
+.card {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.6s ease-out;
+  color: #fff;
+}
+.card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+.extra-text {
+  display: none;
+}
+.form-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.divider {
+  border-left: 2px solid #ccc;
+  height: 100%;
+}
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.image-container img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+.image-caption {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #333;
+}
+
+.form-container {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+.form-container.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.image-container {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+.image-container.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.divider {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+.divider.slide-in {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+footer h4 {
+  font-size: 18px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+footer h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  width: 50px;
+}
+
+footer .list-unstyled li {
+  margin-bottom: 10px;
+}
+
+footer .list-unstyled li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #bbbbbb;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+footer .list-unstyled li a:hover {
+  color: #fff;
+  padding-left: 8px;
+}
+
+footer .social-icon {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.2s;
+}
+
+footer .social-icon:hover {
+  animation: shake 0.5s;
+}
+
+/* Footer social icon shake */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px);
+  }
+  25% {
+    transform: translate(-1px, -1px);
+  }
+  50% {
+    transform: translate(1px, 1px);
+  }
+  75% {
+    transform: translate(-1px, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* ***************************************************Responsive Footer **************************** */
+@media (max-width: 1200px) {
+  footer .col-md-3 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .col-md-3 {
+    width: 35%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .col-md-3 {
+    width: 50%;
+  }
+}
